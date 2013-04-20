@@ -5,6 +5,8 @@ namespace io {
 
 class Driver {
 public:
+  Driver();
+  virtual ~Driver();
 
 private:
 };
