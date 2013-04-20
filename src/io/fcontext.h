@@ -9,6 +9,8 @@
 #ifndef BOOST_CONTEXT_FCONTEXT_H
 #define BOOST_CONTEXT_FCONTEXT_H
 
+#include "io/fcontext_x86_64.h"
+
 namespace io {
 
 extern "C"
@@ -23,9 +25,9 @@ jump_fcontext(
 extern "C"
 fcontext_t*
 make_fcontext(
-  void * sp,
-  std::size_t size,
-  void (* fn)( intptr_t)
+  void* stack,
+  size_t stack_size,
+  void (*fn)(intptr_t)
   );
 
 } // namespace io
